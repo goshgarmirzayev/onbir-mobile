@@ -8,13 +8,41 @@
 </ion-header>
 
 <ion-content>
-<ion-row *ngFor="let match of matchList">
-  <ion-col>
-    <ion-card>
-      <ion-card-header>
-        <ion-card-subtitle>{{match.header}}</ion-card-subtitle>
-      </ion-card-header>
-    </ion-card>
-  </ion-col>
-</ion-row>
+  <ion-row *ngFor="let match of matchList">
+    <ion-col>
+      <ion-card class="match-card">
+        <ion-card-header>
+          <ion-card-subtitle class="ion-text-center">{{match.league}}</ion-card-subtitle>
+          <p class="ion-text-center">{{match.beginDate}}</p>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-row>
+            <ion-col size="6">
+              <ion-row>
+                <ion-col size="9">
+                  <ion-label class="ion-float-right"> {{match.header.split(" - ")[0]}}</ion-label>
+                </ion-col>
+                <ion-col size="3">
+                  <ion-img [src]="'https://media.api-sports.io/football/teams/' +match.homeId + '.png'"></ion-img>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+            <ion-col size="6" class="">
+              <ion-row>
+                <ion-col size="3">
+                  <ion-img [src]="'https://media.api-sports.io/football/teams/' +match.awayId + '.png'"></ion-img>
+                </ion-col>
+
+                <ion-col size="9">
+                  <ion-label class="ion-float-left">{{match.header.split(" - ")[1]}}</ion-label>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+
+          </ion-row>
+            <a style="width: 50%; margin-top: 30px" class="watch-button">Canlı İzlə</a>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
 </ion-content>
