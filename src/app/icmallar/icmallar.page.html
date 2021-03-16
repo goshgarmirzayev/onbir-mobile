@@ -3,11 +3,11 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>XƏBƏRLƏR</ion-title>
+<ion-title>İCMALLAR</ion-title>
   </ion-toolbar>
-
 </ion-header>
 <ion-content>
+
   <ion-card>
 
     <ion-card-content>
@@ -17,13 +17,13 @@
 
     </ion-card-content>
   </ion-card>
-<ion-card *ngFor="let news of newsList"  class="news-card">
-  <ion-card-header>
+  <ion-card *ngFor="let news of newsList" class="news-card">
+    <ion-card-header>
       <ion-img [src]="news.imageUrl"></ion-img>
-    <ion-card-title [innerHTML]="news.title"></ion-card-title>
-  </ion-card-header>
-  <ion-card-content>
-    <ion-label [innerHTML]="news.content.substr(0,100) +'...'" ></ion-label>
-  </ion-card-content>
-</ion-card>
+      <ion-card-title [innerHTML]="news.title"></ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label [innerHTML]="news.content.substr(0,100) +'...'"></ion-label>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

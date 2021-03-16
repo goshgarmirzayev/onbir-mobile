@@ -4,12 +4,8 @@ import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: 'news',
     pathMatch: 'full'
-  },
-  {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then(m => m.FolderPageModule)
   },
   {
     path: 'news',
@@ -18,6 +14,10 @@ const routes: Routes = [
   {
     path: 'live-streaming',
     loadChildren: () => import('./live-streaming/live-streaming.module').then(m => m.LiveStreamingPageModule)
+  },
+  {
+    path: 'icmallar',
+    loadChildren: () => import('./icmallar/icmallar.module').then( m => m.IcmallarPageModule)
   }
 ];
 

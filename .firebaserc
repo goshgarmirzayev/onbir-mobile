@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "onbir-tv-angular": {
+      "hosting": {
+        "app": [
+          "onbir-tv-angular"
+        ]
+      }
+    }
+  }
+}
