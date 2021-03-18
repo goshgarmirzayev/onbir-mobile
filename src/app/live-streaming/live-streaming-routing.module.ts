@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
 
-import { LiveStreamingPage } from './live-streaming.page';
+import {LiveStreamingPage} from './live-streaming.page';
 import {SingleStreamingComponent} from './single-streaming/single-streaming.component';
 
 const routes: Routes = [
@@ -11,7 +11,7 @@ const routes: Routes = [
   },
   {
     path: 'watch',
-    component: SingleStreamingComponent
+    component: SingleStreamingComponent,
   }
 ];
 
@@ -19,4 +19,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class LiveStreamingPageRoutingModule {}
+export class LiveStreamingPageRoutingModule {
+}

@@ -1,2 +1,12 @@
-<iframe width="560" height="315" src="https://www.canlitv.biz/embed/?id=12732" frameborder="0" allowfullscreen></iframe>
-
+<ion-header>
+  <ion-title>
+    {{match.header}}
+  </ion-title>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <iframe *ngIf="match.links" [src]="match.links[0].url" width="100%"></iframe>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

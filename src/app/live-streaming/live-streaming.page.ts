@@ -22,4 +22,8 @@ export class LiveStreamingPage implements OnInit {
       this.matchList = data;
     }));
   }
+
+  setActiveMatchId(id) {
+
+  }
 }
