@@ -7,7 +7,8 @@ export const environment = {
   ENDPOINTS: {
     NEWS: 'http://onbir.tv:8080/rest/getAllModifiedPosts',
     LIVE: 'http://onbir.tv:8080/rest/getAllMatches',
-    ICMAL: 'http://onbir.tv:8080/rest/getHighlights'
+    ICMAL: 'http://onbir.tv:8080/rest/getHighlights',
+    LIVE_SINGLE: 'http://onbir.tv:8080/rest/getMatchData/:id'
   }
 };
 
