@@ -24,6 +24,5 @@ export class LiveStreamingPage implements OnInit {
   }
 
   setActiveMatchId(id) {
-
   }
 }

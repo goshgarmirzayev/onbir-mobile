@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>XƏBƏRLƏR</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-img [src]="news?.imageUrl"></ion-img>
+      <ion-card-title class="ion-margin-top" [innerHTML]="news?.title"></ion-card-title>
+    </ion-card-header>
+    <ion-card-content [innerHTML]="news?.content">
+    </ion-card-content>
+  </ion-card>
+</ion-content>

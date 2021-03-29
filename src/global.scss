@@ -24,6 +24,7 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
-body{
-  background-color: #0d0d0d!important;
+
+a {
+  text-decoration: none !important;
 }

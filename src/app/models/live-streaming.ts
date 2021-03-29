@@ -7,5 +7,5 @@ export class LiveStreaming {
   league: string;
   homeId: number;
   awayId: number;
-  links: LinkResponse [];
+  linkDTOS: LinkResponse [];
 }

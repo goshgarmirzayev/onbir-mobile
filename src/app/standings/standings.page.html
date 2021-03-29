@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>TURNIR CƏDVƏLİ</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+<ion-content>
+  <ion-select class="ion-margin-top" [cancelText]="'İmtina et'" [okText]="'Seç'" [selectedText]="'Primera División'" id="league-select" [(ngModel)]="selectedLeague" (ionChange)="changeLeague()" title="Liqa seçin">
+
+    <ion-select-option [value]="i"  *ngFor="let name of leagues; let i = index">{{name}}</ion-select-option>
+  </ion-select>
+  <ion-col class="league-col" size="12" *ngFor="let leagueData of leagueData">
+    <ion-row class="league-table">
+      <ion-col size="7">
+        <ion-label>#
+          <ion-label class="ion-margin-start">{{leagueData.api.standings[0][0].group}}</ion-label>
+        </ion-label>
+      </ion-col>
+      <ion-col size="1">
+        <ion-label>O</ion-label>
+      </ion-col>
+      <ion-col size="1">
+        <ion-label>Q</ion-label>
+      </ion-col>
+      <ion-col size="1">
+        <ion-label>M</ion-label>
+      </ion-col>
+      <ion-col size="1">
+        <ion-label>B</ion-label>
+      </ion-col>
+      <ion-col size="1">
+        <ion-label>X</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row class="league-row" *ngFor="let league of leagueData.api.standings[0]">
+      <ion-col size="7">
+        <ion-label>{{league?.rank + '. ' + league.teamName}}</ion-label>
+      </ion-col>
+      <ion-col size="1">
+        <ion-label>{{league.matchsPlayed}}</ion-label>
+      </ion-col>
+      <ion-col size="1">
+        <ion-label>{{league.win}}</ion-label>
+      </ion-col>
+      <ion-col size="1">
+        <ion-label>{{league.lose}}</ion-label>
+      </ion-col>
+      <ion-col size="1">
+        <ion-label>{{league.draw}}</ion-label>
+      </ion-col>
+      <ion-col size="1">
+        <ion-label>{{league?.points}}</ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-col>
+</ion-content>

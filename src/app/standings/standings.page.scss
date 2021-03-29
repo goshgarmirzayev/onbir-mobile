@@ -1,0 +1,29 @@
+.league-table {
+  background: #e0bb2e;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px;
+}
+.league-table ion-label{
+  color: #0d1929!important;
+}
+.league-row{
+  background: #0d1929;
+  padding: 10px;
+}
+#league-select{
+  background: #0d1929;
+  color: #8c8c8c;
+}
+ion-content{
+  --ion-background-color:#0d1929;
+}
+.league-col{
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.league-row ion-label {
+  color: #8c8c8c;
+  font-size: small;
+}
+

@@ -7,23 +7,46 @@
   </ion-toolbar>
 
 </ion-header>
-<ion-content>
+<ion-content *ngIf="newsList">
   <ion-card>
 
     <ion-card-content>
       <ion-toolbar>
         <ion-searchbar></ion-searchbar>
       </ion-toolbar>
-
     </ion-card-content>
   </ion-card>
-<ion-card *ngFor="let news of newsList"  class="news-card">
-  <ion-card-header>
-      <ion-img [src]="news.imageUrl"></ion-img>
-    <ion-card-title [innerHTML]="news.title"></ion-card-title>
-  </ion-card-header>
-  <ion-card-content>
-    <ion-label [innerHTML]="news.content.substr(0,100) +'...'" ></ion-label>
-  </ion-card-content>
-</ion-card>
+  <ion-card *ngFor="let news of newsList" class="news-card">
+    <a [href]="'/news/single?newsId='+ news.id">
+      <ion-card-header>
+
+         <ion-img [src]="news.imageUrl"></ion-img>
+
+        <ion-card-title [innerHTML]="news.title"></ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-label [innerHTML]="news.content.substr(0,100) +'...'"></ion-label>
+      </ion-card-content>
+    </a>
+  </ion-card>
+</ion-content>
+<ion-content class="ion-text-center ion-margin-vertical" *ngIf="!newsList">
+  <ion-card>
+    <ion-header>
+      <ion-card-title>
+
+      </ion-card-title>
+    </ion-header>
+    <ion-card-content>
+      <h1><ion-icon slot="start" size="" ios="cloud-offline-sharp" md="cloud-offline"></ion-icon></h1>
+      <ion-label>
+        <strong> Xəbərlər tapılmadı...</strong>
+      </ion-label>
+    </ion-card-content>
+  </ion-card>
+  <ion-row>
+    <ion-col size="12">
+      <ion-img src="assets/no-data.svg"></ion-img>
+    </ion-col>
+  </ion-row>
 </ion-content>

@@ -23,7 +23,8 @@ export class SingleStreamingComponent implements OnInit {
   }
 
   getData() {
-   this.service.getMatchById(this.matchId).subscribe((data => {
+    this.service.getMatchById(this.matchId).subscribe((data => {
+      console.log(data);
       this.match = data;
     }));
   }

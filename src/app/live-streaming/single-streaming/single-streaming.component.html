@@ -1,12 +1,17 @@
 <ion-header>
   <ion-title>
-    {{match.header}}
+  Canlı Matç
   </ion-title>
 </ion-header>
 <ion-content>
   <ion-card>
-    <ion-card-content>
-      <iframe *ngIf="match.links" [src]="match.links[0].url" width="100%"></iframe>
+    <ion-card-header>
+      <ion-card-title>
+        {{match?.header}}
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content *ngIf="match?.linkDTOS">
+      <iframe [src]="match?.linkDTOS[0].url"></iframe>
     </ion-card-content>
   </ion-card>
 </ion-content>

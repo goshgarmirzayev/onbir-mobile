@@ -3,11 +3,11 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
+    <ion-title>CANLI MATÇLAR</ion-title>
   </ion-toolbar>
-  <ion-title>Canlı Matçlar</ion-title>
 </ion-header>
 
-<ion-content>
+<ion-content *ngIf="matchList?.length>1">
   <ion-row *ngFor="let match of matchList">
     <ion-col>
       <ion-card class="match-card">
@@ -40,9 +40,30 @@
             </ion-col>
 
           </ion-row>
-            <a style="width: 50%; margin-top: 30px" class="watch-button" [href]="'live-streaming/watch?matchId='+ match?.id">Canlı İzlə</a>
+          <a style="width: 50%; margin-top: 30px" class="watch-button"
+             [href]="'live-streaming/watch?matchId='+ match?.id">Canlı İzlə</a>
         </ion-card-content>
       </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>
+<ion-content class="ion-text-center ion-margin-vertical" *ngIf="matchList?.length<1">
+  <ion-card>
+    <ion-header>
+      <ion-card-title>
+
+      </ion-card-title>
+    </ion-header>
+    <ion-card-content>
+      <h1><ion-icon slot="start" size="" ios="videocam-off-sharp" md="videocam-off"></ion-icon></h1>
+      <ion-label>
+        <strong> Oyunlar tapılmadı...</strong>
+      </ion-label>
+    </ion-card-content>
+  </ion-card>
+  <ion-row>
+    <ion-col size="12">
+      <ion-img src="assets/no-data.svg"></ion-img>
     </ion-col>
   </ion-row>
 </ion-content>

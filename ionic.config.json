@@ -1,7 +1,8 @@
 {
-  "name": "onbir_news",
+  "name": "onbir_mobile",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }

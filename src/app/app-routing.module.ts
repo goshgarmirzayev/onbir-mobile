@@ -17,8 +17,16 @@ const routes: Routes = [
   },
   {
     path: 'icmallar',
-    loadChildren: () => import('./icmallar/icmallar.module').then( m => m.IcmallarPageModule)
+    loadChildren: () => import('./icmallar/icmallar.module').then(m => m.IcmallarPageModule)
+  },
+  {
+    path: 'standings',
+    loadChildren: () => import('./standings/standings.module').then(m => m.StandingsPageModule)
+  },  {
+    path: 'contact',
+    loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
   }
+
 ];
 
 @NgModule({
@@ -27,4 +35,5 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+}
