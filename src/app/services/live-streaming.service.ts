@@ -1,9 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {retry} from 'rxjs/operators';
 import {environment} from '../../environments/environment';
-import {LiveStreaming} from '../models/live-streaming';
 
 @Injectable({
   providedIn: 'root'
